@@ -25,11 +25,21 @@ namespace dns
                         string hostname = Console.ReadLine();
                         if (hostname.ToLower() != "q")
                         {
-                             System.Net.IPAddress[] addressList = Dns.GetHostAddresses(hostname);//会返回所有地址，包括IPv4和IPv6   
-                             foreach (IPAddress ip in addressList)
+                            try
                             {
-                                Console.WriteLine(ip.ToString());
+                                System.Net.IPAddress[] addressList = Dns.GetHostAddresses(hostname);//会返回所有地址，包括IPv4和IPv6   
+                                foreach (IPAddress ip in addressList)
+                                {
+                                    Console.WriteLine(ip.ToString());
+                                }
                             }
+                            catch (Exception ex)
+                            {
+
+                                Console.WriteLine(ex.Message);
+                            }
+
+                           
                         }
                         else
                         {
