@@ -1,0 +1,4 @@
+D:\Edward\dns\dns\bin\Debug\dns.exe
+D:\Edward\dns\dns\bin\Debug\dns.pdb
+D:\Edward\dns\dns\obj\Debug\dns.exe
+D:\Edward\dns\dns\obj\Debug\dns.pdb
